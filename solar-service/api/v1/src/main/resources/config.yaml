@@ -50,13 +50,13 @@ kumuluzee:
               - solar.sendNewPosition
               - solar.position.*
             #            description:
-            #            retention-policy:
+            retention-policy: interest
             #            max-consumers:
             #            max-bytes:
             #            max-age:
             #            max-msgs:
             #            max-msg-size:
-            storage-type: memory
+            storage-type: file
     #            replicas:
     #            no-ack:
     #            template-owner:

@@ -1,0 +1,76 @@
+package com.matejbizjak.smartvillages.solar.persistence;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.math.BigDecimal;
+import java.time.Duration;
+import java.time.Instant;
+
+@Entity
+@Table(name = "energy")
+@NamedNativeQueries({
+        @NamedNativeQuery(name = EnergyEntity.FIND_SOLAR_ENERGY_DURING_TIME_PERIOD
+                , query = "SELECT * FROM energy WHERE solar_id = :solarId AND start_time >= :startTime AND start_time + CAST(duration/1000000000||' seconds' AS interval) < :endTime ORDER BY start_time"
+                , resultClass = EnergyEntity.class)
+})
+public class EnergyEntity {
+
+    public static final String FIND_SOLAR_ENERGY_DURING_TIME_PERIOD = "Solar.findSolarEnergyDuringTimePeriod";
+
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(name = "energy_id")
+    private String id;
+
+    @Column(name = "solar_id")
+    private String solarId;
+
+    @Column(name = "start_time")
+    private Instant startTime;
+
+    private Duration duration;
+
+    private BigDecimal value;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getSolarId() {
+        return solarId;
+    }
+
+    public void setSolarId(String solarId) {
+        this.solarId = solarId;
+    }
+
+    public Instant getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Instant startTime) {
+        this.startTime = startTime;
+    }
+
+    public Duration getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Duration duration) {
+        this.duration = duration;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public void setValue(BigDecimal value) {
+        this.value = value;
+    }
+}

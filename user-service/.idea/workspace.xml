@@ -5,62 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65bd9f85-091b-4857-9b67-45a622b5047b" name="Changes" comment="User service">
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/src/main/java/com/matejbizjak/smartvillages/solariot/SolarIotApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/src/main/java/com/matejbizjak/smartvillages/solariot/SslUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/src/main/resources/certs/keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-iot/src/main/resources/certs/truststore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/NatsMapperProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/SolarApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/config/AuthRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/META-INF/services/com.kumuluz.ee.nats.common.util.NatsObjectMapperProvider" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/certs/keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/certs/truststore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/import.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/lib/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/lib/v1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/solar/lib/v1/Energy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/persistence/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/persistence/src/main/java/com/matejbizjak/smartvillages/solar/persistence/Solar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/persistence/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/services/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/SolarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../solar-service/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-iot/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/persistence/src/main/java/com/matejbizjak/smartvillages/solar/persistence/SolarEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/PositionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/responses/EnergyResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solar-service/solar-service-lib-v1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-iot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-iot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-iot/src/main/java/com/matejbizjak/smartvillages/solariot/SolarIotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-iot/src/main/java/com/matejbizjak/smartvillages/solariot/SolarIotApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/solar/lib/v1/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/solar/lib/v1/Energy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/persistence/src/main/java/com/matejbizjak/smartvillages/solar/persistence/Solar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/persistence/src/main/java/com/matejbizjak/smartvillages/solar/persistence/EnergyEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/persistence/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/persistence/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/SolarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/SolarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/src/main/java/com/matejbizjak/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/src/main/java/com/matejbizjak/smartvillages/user/api/v1/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/src/main/java/com/matejbizjak/user/config/AuthRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/src/main/java/com/matejbizjak/smartvillages/user/api/v1/config/AuthRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/src/main/java/com/matejbizjak/user/resouces/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/src/main/java/com/matejbizjak/smartvillages/user/api/v1/resouces/UserResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/com/matejbizjak/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/com/matejbizjak/smartvillages/user/persistence/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/user/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/user/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/user/config/ConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/user/services/config/ConfigProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/user/restclient/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/user/services/restclient/UserApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +93,7 @@
       <workItem from="1659621982467" duration="4316000" />
       <workItem from="1659721352905" duration="599000" />
       <workItem from="1659727018208" duration="1522000" />
+      <workItem from="1659939304816" duration="1212000" />
     </task>
     <task id="LOCAL-00001" summary="User service">
       <created>1659557580748</created>

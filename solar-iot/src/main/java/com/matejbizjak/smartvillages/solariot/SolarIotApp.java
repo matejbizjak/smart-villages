@@ -3,12 +3,15 @@ package com.matejbizjak.smartvillages.solariot;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.kumuluz.ee.logs.LogManager;
+import com.kumuluz.ee.logs.Logger;
 import com.matejbizjak.smartvillages.solar.lib.v1.Energy;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+import java.awt.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.Duration;
@@ -19,10 +22,13 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class SolarIotApp {
-    static ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
+
+    private static final Logger LOG = LogManager.getLogger(SolarIotApp.class.getSimpleName());
+    private static String solarId;
+    private static final ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
     public static void main(String[] args) {
-        String solarId = args[0];
+        solarId = args[0];
         String keyStorePassword = args[1];
         String trustStorePassword = args[2];
 
@@ -38,13 +44,24 @@ public class SolarIotApp {
                     , "certs/truststore.jks", trustStorePassword).createSocketFactory());
 
             mqttClient.connect(options);
+            LOG.info(String.format("Solar %s was successfully connected to MQTT server.", solarId));
+
+            mqttClient.subscribe("solar/position/" + solarId, (topic, msg) -> {
+                Point newPosition = objectMapper.readValue(msg.getPayload(), Point.class);
+                changePosition(newPosition);
+            });
+            LOG.info(String.format("Subscribed to MQTT topic %s.", "solar/position/" + solarId));
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
             executorService.scheduleAtFixedRate(new EnergyMeter(mqttClient, "solar/energy/" + solarId)
-                    , 0, 1, TimeUnit.SECONDS);
+                    , 0, 5, TimeUnit.SECONDS);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private static void changePosition(Point newPosition) {
+        LOG.info(String.format("Changing position of solar %s to (%s, %s).", solarId, newPosition.x, newPosition.y));
     }
 
     static class EnergyMeter implements Runnable {
@@ -60,7 +77,7 @@ public class SolarIotApp {
         public void run() {
             try {
                 mqttClient.publish(topic, readMeasurements());
-                System.out.println("Published message to topic " + topic);
+                LOG.info(String.format("Published MQTT message to topic %s.", topic));
             } catch (MqttException e) {
                 throw new RuntimeException(e);
             }
@@ -69,7 +86,7 @@ public class SolarIotApp {
         private MqttMessage readMeasurements() {
             Energy energy = new Energy();
             energy.setStartTime(Instant.now().truncatedTo(ChronoUnit.SECONDS));
-            energy.setWatt(generateRandomBigDecimalFromRange(new BigDecimal(1), new BigDecimal(5)));
+            energy.setValue(generateRandomBigDecimalFromRange(new BigDecimal(1), new BigDecimal(5)));
             energy.setDuration(Duration.ofSeconds(1));
 
             try {

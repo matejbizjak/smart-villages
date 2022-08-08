@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
-    <persistence-unit name="main-jpa-unit" transaction-type="RESOURCE_LOCAL">
+    <!--    <persistence-unit name="main-jpa-unit" transaction-type="RESOURCE_LOCAL">-->
+    <persistence-unit name="main-jpa-unit" transaction-type="JTA">
 
-        <non-jta-data-source>jdbc/mainDB</non-jta-data-source>
-        <!--        <jta-data-source>jdbc/mainDB</jta-data-source>-->
+        <!--        <non-jta-data-source>jdbc/mainDB</non-jta-data-source>-->
+        <jta-data-source>jdbc/mainDB</jta-data-source>
 
-        <class>com.matejbizjak.smartvillages.solar.persistence.Solar</class>
+        <class>com.matejbizjak.smartvillages.solar.persistence.SolarEntity</class>
+        <class>com.matejbizjak.smartvillages.solar.persistence.EnergyEntity</class>
 
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.CockroachDB201Dialect"/>

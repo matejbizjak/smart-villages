@@ -6,7 +6,7 @@ import java.time.Instant;
 
 public class Energy {
 
-    private BigDecimal watt;
+    private BigDecimal value;
 
     private Instant startTime;
 
@@ -15,18 +15,18 @@ public class Energy {
     public Energy() {
     }
 
-    public Energy(BigDecimal watt, Instant startTime, Duration duration) {
-        this.watt = watt;
+    public Energy(BigDecimal value, Instant startTime, Duration duration) {
+        this.value = value;
         this.startTime = startTime;
         this.duration = duration;
     }
 
-    public BigDecimal getWatt() {
-        return watt;
+    public BigDecimal getValue() {
+        return value;
     }
 
-    public void setWatt(BigDecimal watt) {
-        this.watt = watt;
+    public void setValue(BigDecimal value) {
+        this.value = value;
     }
 
     public Instant getStartTime() {
