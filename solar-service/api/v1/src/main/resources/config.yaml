@@ -4,9 +4,9 @@ kumuluzee:
     name: dev
   version: 1.0.0-SNAPSHOT
   server:
-    base-url: http://localhost:8082
+    base-url: http://localhost:8083
     http:
-      port: 8082
+      port: 8083
   datasources:
     - jndi-name: jdbc/mainDB
       connection-url: jdbc:postgresql://localhost:26257/smart_village?sslmode=disable
@@ -47,56 +47,8 @@ kumuluzee:
           - name: solar
             subjects:
               - solar.energy.*
+              - solar.energy.new.*
               - solar.sendNewPosition
               - solar.position.*
-            #            description:
             retention-policy: interest
-            #            max-consumers:
-            #            max-bytes:
-            #            max-age:
-            #            max-msgs:
-            #            max-msg-size:
             storage-type: file
-    #            replicas:
-    #            no-ack:
-    #            template-owner:
-    #            discard-policy:
-    #            duplicate-window:
-    consumer-configuration:
-      - name: newMessages
-        deliver-policy: new
-  #        ack-policy:
-  #        replay-policy:
-  #        description:
-  #        durable:
-  #        deliver-subject:
-  #        deliver-group:
-  #        filter-subject:
-  #        sample-frequency:
-  #        start-time:
-  #        ack-wait:
-  #        idle-heartbeat:
-  #        max-expires:
-  #        inactive-threshold:
-  #        start-seq:
-  #        max-deliver:
-  #        rate-limit:
-  #        max-ack-pending:
-  #        max-pull-waiting:
-  #        max-batch:
-  #        max-bytes:
-  #        flow-control:
-  #        headers-only:
-  #        backoff:
-
-store-urls:
-  #  url-catalog: http://localhost:8080/
-  #  url-customers: http://localhost:8081/
-  #  url-orders: http://localhost:8082/
-  #  keycloak-url: http://localhost:8180/auth
-  #  keycloak-realm: store
-#  url-catalog: http://svc-app-store-catalog-kum:8080/
-#  url-customers: http://svc-app-store-customers-kum:8081/
-#  url-orders: http://svc-app-store-orders-kum:8082/
-#  keycloak-url: http://keycloak:8080/
-#  keycloak-realm: users-realm

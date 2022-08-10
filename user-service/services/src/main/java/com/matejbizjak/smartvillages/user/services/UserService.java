@@ -1,8 +1,8 @@
 package com.matejbizjak.smartvillages.user.services;
 
-import com.matejbizjak.smartvillages.user.persistence.User;
 import com.matejbizjak.smartvillages.user.services.config.ConfigProperties;
 import com.matejbizjak.smartvillages.user.services.restclient.UserApi;
+import com.matejbizjak.smartvillages.userlib.v1.User;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 import javax.enterprise.context.ApplicationScoped;

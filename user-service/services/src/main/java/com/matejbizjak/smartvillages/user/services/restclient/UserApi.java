@@ -1,15 +1,17 @@
 package com.matejbizjak.smartvillages.user.services.restclient;
 
-import com.matejbizjak.smartvillages.user.persistence.User;
+import com.matejbizjak.smartvillages.userlib.v1.User;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.HeaderParam;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.enterprise.context.Dependent;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 @RegisterRestClient
+@Dependent
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public interface UserApi {
 
     @GET

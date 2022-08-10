@@ -12,11 +12,19 @@ import java.time.Instant;
 @NamedNativeQueries({
         @NamedNativeQuery(name = EnergyEntity.FIND_SOLAR_ENERGY_DURING_TIME_PERIOD
                 , query = "SELECT * FROM energy WHERE solar_id = :solarId AND start_time >= :startTime AND start_time + CAST(duration/1000000000||' seconds' AS interval) < :endTime ORDER BY start_time"
+                , resultClass = EnergyEntity.class),
+        @NamedNativeQuery(name = EnergyEntity.FIND_ALL_SOLAR_ENERGY_DURING_TIME_PERIOD_FOR_USER
+                , query = "SELECT * FROM energy WHERE solar_id IN :solarId AND start_time >= :startTime AND start_time + CAST(duration/1000000000||' seconds' AS interval) < :endTime ORDER BY solar_id, start_time"
+                , resultClass = EnergyEntity.class),
+        @NamedNativeQuery(name = EnergyEntity.FIND_ALL_SOLAR_ENERGY_DURING_TIME_PERIOD
+                , query = "SELECT * FROM energy WHERE start_time >= :startTime AND start_time + CAST(duration/1000000000||' seconds' AS interval) < :endTime ORDER BY solar_id, start_time"
                 , resultClass = EnergyEntity.class)
 })
 public class EnergyEntity {
 
     public static final String FIND_SOLAR_ENERGY_DURING_TIME_PERIOD = "Solar.findSolarEnergyDuringTimePeriod";
+    public static final String FIND_ALL_SOLAR_ENERGY_DURING_TIME_PERIOD_FOR_USER = "Solar.findAllSolarEnergyDuringTimePeriodForUser";
+    public static final String FIND_ALL_SOLAR_ENERGY_DURING_TIME_PERIOD = "Solar.findAllSolarEnergyDuringTimePeriod";
 
     @Id
     @GeneratedValue(generator = "uuid")

@@ -11,10 +11,6 @@
 
     <artifactId>services</artifactId>
 
-    <properties>
-        <kumuluzee-rest-client.version>1.4.1.2</kumuluzee-rest-client.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
@@ -23,12 +19,23 @@
         <dependency>
             <groupId>com.kumuluz.ee.rest-client</groupId>
             <artifactId>kumuluzee-rest-client</artifactId>
-            <version>${kumuluzee-rest-client.version}</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.kumuluz.ee.rest</groupId>-->
+<!--            <artifactId>kumuluzee-rest-core</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-json-p-jsonp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-json-b-yasson</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.matejbizjak.smartvillages.user</groupId>
-            <artifactId>persistence</artifactId>
+            <artifactId>user-service-lib-v1</artifactId>
         </dependency>
     </dependencies>
 

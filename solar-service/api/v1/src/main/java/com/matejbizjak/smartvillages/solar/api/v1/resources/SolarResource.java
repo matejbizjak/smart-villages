@@ -1,9 +1,9 @@
 package com.matejbizjak.smartvillages.solar.api.v1.resources;
 
+import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForSolar;
 import com.matejbizjak.smartvillages.solar.persistence.SolarEntity;
 import com.matejbizjak.smartvillages.solar.services.EnergyService;
 import com.matejbizjak.smartvillages.solar.services.SolarService;
-import com.matejbizjak.smartvillages.solar.services.responses.EnergyResponse;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -62,7 +62,7 @@ public class SolarResource {
         try {
             Instant startTime = Instant.parse(startTimeString);
             Instant endTime = Instant.parse(endTimeString);
-            EnergyResponse energyDuringTimePeriod = energyService.getSolarEnergyDuringTimePeriod(solarId, startTime, endTime);
+            EnergySolarIntervalForSolar energyDuringTimePeriod = energyService.getSolarEnergyDuringTimePeriod(solarId, startTime, endTime);
             return Response.status(Response.Status.OK).entity(energyDuringTimePeriod).build();
         } catch (DateTimeParseException dtpe) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Cannot parse the provided dates.").build();

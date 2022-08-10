@@ -9,11 +9,13 @@ import java.time.Instant;
 @Entity
 @Table(name = "solar")
 @NamedQueries({
-        @NamedQuery(name = SolarEntity.FIND_ALL, query = "SELECT s FROM SolarEntity s")
+        @NamedQuery(name = SolarEntity.FIND_ALL, query = "SELECT s FROM SolarEntity s"),
+        @NamedQuery(name = SolarEntity.FIND_FOR_USER, query = "SELECT s FROM SolarEntity s WHERE s.userId = :userId")
 })
 public class SolarEntity {
 
     public static final String FIND_ALL = "Solar.findAll";
+    public static final String FIND_FOR_USER = "Solar.findForUser";
 
     @Id
     @GeneratedValue(generator = "uuid")

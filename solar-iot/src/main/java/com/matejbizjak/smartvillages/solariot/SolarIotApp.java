@@ -53,8 +53,8 @@ public class SolarIotApp {
             LOG.info(String.format("Subscribed to MQTT topic %s.", "solar/position/" + solarId));
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
-            executorService.scheduleAtFixedRate(new EnergyMeter(mqttClient, "solar/energy/" + solarId)
-                    , 0, 5, TimeUnit.SECONDS);
+            executorService.scheduleAtFixedRate(new EnergyMeter(mqttClient, "solar/energy/new/" + solarId)
+                    , 0, 1, TimeUnit.SECONDS);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -74,6 +74,7 @@ public class SolarIotApp {
             this.topic = topic;
         }
 
+        @Override
         public void run() {
             try {
                 mqttClient.publish(topic, readMeasurements());
@@ -86,7 +87,7 @@ public class SolarIotApp {
         private MqttMessage readMeasurements() {
             Energy energy = new Energy();
             energy.setStartTime(Instant.now().truncatedTo(ChronoUnit.SECONDS));
-            energy.setValue(generateRandomBigDecimalFromRange(new BigDecimal(1), new BigDecimal(5)));
+            energy.setValue(generateRandomBigDecimalFromRange(new BigDecimal(180), new BigDecimal(190)));
             energy.setDuration(Duration.ofSeconds(1));
 
             try {

@@ -47,6 +47,11 @@
                 <artifactId>solar-service-lib-v1</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>com.matejbizjak.smartvillages.user</groupId>
+                <artifactId>user-service-lib-v1</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.kumuluz.ee</groupId>
@@ -74,7 +79,7 @@
             <dependency>
                 <groupId>com.kumuluz.ee.nats</groupId>
                 <artifactId>kumuluzee-nats-jetstream</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${kumuluzee-nats.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.keycloak</groupId>

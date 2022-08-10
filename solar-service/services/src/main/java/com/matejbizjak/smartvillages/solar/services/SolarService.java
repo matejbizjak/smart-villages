@@ -29,4 +29,10 @@ public class SolarService {
         return em.find(SolarEntity.class, solarId);
     }
 
+    public List<SolarEntity> getSolarForUser(String userId) {
+        TypedQuery<SolarEntity> query = em.createNamedQuery(SolarEntity.FIND_FOR_USER, SolarEntity.class);
+        query.setParameter("userId", userId);
+        return query.getResultList();
+    }
+
 }

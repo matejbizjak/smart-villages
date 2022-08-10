@@ -1,0 +1,33 @@
+kumuluzee:
+  name: notification-service
+  env:
+    name: dev
+  version: 1.0.0
+  server:
+    base-url: http://localhost:8084
+    http:
+      port: 8084
+  nats:
+    jetstream: true
+    ack-confirmation-timeout: PT5S
+    servers:
+      - name: secure
+        addresses:
+          - tls://localhost:4224
+        tls:
+          trust-store-path: certs\truststore.jks
+          trust-store-password: password2
+          key-store-path: certs\keystore.jks
+          key-store-password: password
+        streams:
+          - name: notification
+            subjects:
+              - mail.dailyUsage
+            retention-policy: interest
+            storage-type: file
+
+email-props:
+  host: smtp.gmail.com
+  port: 587
+  username:
+  password:

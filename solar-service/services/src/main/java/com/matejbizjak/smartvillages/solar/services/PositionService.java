@@ -26,7 +26,7 @@ public class PositionService {
     @Inject
     private SolarService solarService;
     @Inject
-    @JetStreamProducer
+    @JetStreamProducer(connection = "secure")
     private JetStream jetStream;
 
     @PersistenceContext(unitName = "main-jpa-unit")
@@ -42,6 +42,7 @@ public class PositionService {
                         .data(SerDes.serialize(calculateNewPosition(solarEntity)))
                         .build();
                 jetStream.publishAsync(message);
+                LOG.info("Sent data to subject " + "solar.position." + solarEntity.getId());
             } catch (JsonProcessingException e) {
                 LOG.log(LogLevel.ERROR, "Serialization error.", e);
                 throw new RuntimeException(e);
