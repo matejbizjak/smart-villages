@@ -1,0 +1,34 @@
+version: "3.5"
+services:
+  nats-n1-main:
+    image: nats:latest
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: "-c /etc/nats/n1-main.conf"
+    networks: ["nats"]
+    volumes:
+      - ./config/:/etc/nats
+      - ../certs/:/etc/nats/certs
+  nats-n2-main:
+    image: nats:latest
+    ports:
+      - "4223:4222"
+    command: "-c /etc/nats/n2-main.conf"
+    networks: ["nats"]
+    volumes:
+      - ./config/:/etc/nats
+      - ../certs/:/etc/nats/certs
+  nats-n3-main:
+    image: nats:latest
+    ports:
+      - "4224:4222"
+    command: "-c /etc/nats/n3-main.conf"
+    networks: ["nats"]
+    volumes:
+      - ./config/:/etc/nats
+      - ../certs/:/etc/nats/certs
+
+networks:
+  nats:
+    name: nats

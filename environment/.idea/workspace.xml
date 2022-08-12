@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/environment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certs/rootCA.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certs/server-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certs/server-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/config/n1-main.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/config/n2-main.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/config/n3-main.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/run-nats-servers.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/simple-cluster.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DCqrioxnR7q4PaHk0I77UIMQQu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matej/IdeaProjects/smart-villages/environment/nats/config/simple cluster poskus 1&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.49655172&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\simple cluster poskus 1" />
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats" />
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config" />
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\config poskus 2" />
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\config backup" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.nats/simple-cluster.yaml: Compose Deployment">
+    <configuration name="nats/run-nats-servers.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="nats/run-nats-servers.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="nats/run-nats-servers.yaml.n1-main: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="n1-main" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="nats/run-nats-servers.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="nats/run-nats-servers.yaml.n2-main: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="n2-main" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="nats/run-nats-servers.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="nats/simple-cluster.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="nats/simple-cluster.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="nats/test.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="nats/test.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.nats/simple-cluster.yaml: Compose Deployment" />
+        <item itemvalue="Docker.nats/test.yaml: Compose Deployment" />
+        <item itemvalue="Docker.nats/run-nats-servers.yaml: Compose Deployment" />
+        <item itemvalue="Docker.nats/run-nats-servers.yaml.n2-main: Compose Deployment" />
+        <item itemvalue="Docker.nats/run-nats-servers.yaml.n1-main: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="" />
+      <created>1660213614534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660213614534</updated>
+      <workItem from="1660213615929" duration="5747000" />
+      <workItem from="1660226940555" duration="289000" />
+      <workItem from="1660227231963" duration="6105000" />
+      <workItem from="1660314288174" duration="525000" />
+      <workItem from="1660314842550" duration="604000" />
+      <workItem from="1660315474993" duration="2188000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
