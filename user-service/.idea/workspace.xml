@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65bd9f85-091b-4857-9b67-45a622b5047b" name="Changes" comment="User service">
-      <change afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n1.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n2.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n3.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../environment/nats/config/single-leaf.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../environment/nats/nats-main-cluster-with-leaf-cluster.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../environment/nats/nats-main-cluster-with-leaf-single.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../environment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment/nats/config/n1-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/main-n1.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment/nats/config/n2-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/main-n2.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment/nats/config/n3-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/main-n3.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment/nats/nats-main-cluster.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/nats-main-cluster.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

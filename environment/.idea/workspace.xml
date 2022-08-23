@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="Added nats server configurations for the main cluster">
-      <change afterPath="$PROJECT_DIR$/nats/config/leaf-n1.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/config/leaf-n2.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/config/leaf-n3.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/config/single-leaf.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/nats-main-cluster-with-leaf-cluster.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/nats-main-cluster-with-leaf-single.yaml" afterDir="false" />
+    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="Added nats server configurations for the leaf cluster">
       <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nats/config/n1-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/main-n1.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nats/config/n2-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/main-n2.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nats/config/n3-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/main-n3.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nats/nats-main-cluster.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/nats/nats-main-cluster.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +114,7 @@
       <workItem from="1660314288174" duration="525000" />
       <workItem from="1660314842550" duration="604000" />
       <workItem from="1660315474993" duration="6184000" />
-      <workItem from="1661249333984" duration="1238000" />
+      <workItem from="1661249333984" duration="2512000" />
     </task>
     <task id="LOCAL-00001" summary="Added nats server configurations for the main cluster">
       <created>1660318629238</created>
@@ -133,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660318629238</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added nats server configurations for the leaf cluster">
+      <created>1661251415097</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661251415097</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +152,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added nats server configurations for the main cluster" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added nats server configurations for the main cluster" />
+    <MESSAGE value="Added nats server configurations for the leaf cluster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added nats server configurations for the leaf cluster" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

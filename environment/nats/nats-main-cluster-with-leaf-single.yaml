@@ -32,6 +32,7 @@ services:
     image: nats:latest
     ports:
       - "4225:4222"
+      - "1883:1883"
     command: "-c /etc/nats/single-leaf.conf"
     networks: [ "nats" ]
     volumes:
