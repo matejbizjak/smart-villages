@@ -28,6 +28,33 @@ services:
     volumes:
       - ./config/:/etc/nats
       - ../certs/:/etc/nats/certs
+  nats-leaf-n1:
+    image: nats:latest
+    ports:
+      - "4225:4222"
+    command: "-c /etc/nats/leaf-n1.conf"
+    networks: [ "nats" ]
+    volumes:
+      - ./config/:/etc/nats
+      - ../certs/:/etc/nats/certs
+  nats-leaf-n2:
+    image: nats:latest
+    ports:
+      - "4226:4222"
+    command: "-c /etc/nats/leaf-n2.conf"
+    networks: [ "nats" ]
+    volumes:
+      - ./config/:/etc/nats
+      - ../certs/:/etc/nats/certs
+  nats-leaf-n3:
+    image: nats:latest
+    ports:
+      - "4227:4222"
+    command: "-c /etc/nats/leaf-n3.conf"
+    networks: [ "nats" ]
+    volumes:
+      - ./config/:/etc/nats
+      - ../certs/:/etc/nats/certs
 
 networks:
   nats:

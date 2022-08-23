@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/environment.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/certs/rootCA.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/certs/server-cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/certs/server-key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/config/n1-main.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/config/n2-main.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/config/n3-main.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/run-nats-servers.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/simple-cluster.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nats/test.yaml" afterDir="false" />
+    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="Added nats server configurations for the main cluster">
+      <change afterPath="$PROJECT_DIR$/nats/config/leaf-n1.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/config/leaf-n2.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/config/leaf-n3.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/config/single-leaf.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/nats-main-cluster-with-leaf-cluster.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nats/nats-main-cluster-with-leaf-single.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/config/n1-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/main-n1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/config/n2-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/main-n2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/config/n3-main.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/main-n3.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/nats-main-cluster.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/nats/nats-main-cluster.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matej/IdeaProjects/smart-villages/environment/nats/config/simple cluster poskus 1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matej/IdeaProjects/smart-villages/environment/nats&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -54,9 +49,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\simple cluster poskus 1" />
       <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats" />
       <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config" />
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\simple cluster poskus 1" />
       <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\config poskus 2" />
       <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config\config backup" />
     </key>
@@ -64,37 +59,27 @@
       <recent name="C:\Users\Matej\IdeaProjects\smart-villages\environment\nats\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.nats/simple-cluster.yaml: Compose Deployment">
-    <configuration name="nats/run-nats-servers.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+  <component name="RunManager" selected="Docker.nats/nats-main-cluster-with-leaf-cluster.yaml: Compose Deployment">
+    <configuration name="nats/nats-main-cluster-with-leaf-cluster.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="nats/run-nats-servers.yaml" />
+          <option name="sourceFilePath" value="nats/nats-main-cluster-with-leaf-cluster.yaml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="nats/run-nats-servers.yaml.n1-main: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="nats/nats-main-cluster-with-leaf-single.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="services">
-            <list>
-              <option value="n1-main" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="nats/run-nats-servers.yaml" />
+          <option name="sourceFilePath" value="nats/nats-main-cluster-with-leaf-single.yaml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="nats/run-nats-servers.yaml.n2-main: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="nats/nats-main-cluster-with-single-leaf.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="services">
-            <list>
-              <option value="n2-main" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="nats/run-nats-servers.yaml" />
+          <option name="sourceFilePath" value="nats/nats-main-cluster-with-single-leaf.yaml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -117,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.nats/nats-main-cluster-with-leaf-cluster.yaml: Compose Deployment" />
+        <item itemvalue="Docker.nats/nats-main-cluster-with-leaf-single.yaml: Compose Deployment" />
+        <item itemvalue="Docker.nats/nats-main-cluster-with-single-leaf.yaml: Compose Deployment" />
         <item itemvalue="Docker.nats/simple-cluster.yaml: Compose Deployment" />
         <item itemvalue="Docker.nats/test.yaml: Compose Deployment" />
-        <item itemvalue="Docker.nats/run-nats-servers.yaml: Compose Deployment" />
-        <item itemvalue="Docker.nats/run-nats-servers.yaml.n2-main: Compose Deployment" />
-        <item itemvalue="Docker.nats/run-nats-servers.yaml.n1-main: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -138,8 +123,17 @@
       <workItem from="1660227231963" duration="6105000" />
       <workItem from="1660314288174" duration="525000" />
       <workItem from="1660314842550" duration="604000" />
-      <workItem from="1660315474993" duration="2188000" />
+      <workItem from="1660315474993" duration="6184000" />
+      <workItem from="1661249333984" duration="1238000" />
     </task>
+    <task id="LOCAL-00001" summary="Added nats server configurations for the main cluster">
+      <created>1660318629238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660318629238</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +152,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added nats server configurations for the main cluster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added nats server configurations for the main cluster" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
