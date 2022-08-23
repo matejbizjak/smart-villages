@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <!--    <persistence-unit name="main-jpa-unit" transaction-type="RESOURCE_LOCAL">-->
+    <persistence-unit name="main-jpa-unit" transaction-type="JTA">
+
+        <!--        <non-jta-data-source>jdbc/mainDB</non-jta-data-source>-->
+        <jta-data-source>jdbc/mainDB</jta-data-source>
+
+        <class>com.matejbizjak.smartvillages.vehicle.persistence.VehicleEntity</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.CockroachDB201Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2dll.import_files" value="import.sql"/>
+            <!--            <property name="javax.persistence.schema-generation.create-source" value="metadata"/>-->
+            <!--            <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>-->
+        </properties>
+    </persistence-unit>
+</persistence>
