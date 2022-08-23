@@ -14,8 +14,6 @@ import com.matejbizjak.smartvillages.solar.persistence.EnergyEntity;
 import com.matejbizjak.smartvillages.solar.persistence.SolarEntity;
 import com.matejbizjak.smartvillages.userlib.v1.User;
 import io.nats.client.JetStream;
-import io.nats.client.PullSubscribeOptions;
-import io.nats.client.PushSubscribeOptions;
 import io.nats.client.impl.NatsMessage;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -47,7 +45,7 @@ public class EnergyService {
 
     public void storeEnergy(Energy energy, String solarId) {
         EnergyEntity entity = new EnergyEntity();
-        entity.setSolarId(solarId);
+        entity.setSolar(solarService.getSolar(solarId));
         entity.setValue(energy.getValue());
         entity.setStartTime(energy.getStartTime());
         entity.setDuration(energy.getDuration());
