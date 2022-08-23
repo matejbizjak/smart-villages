@@ -35,8 +35,10 @@ kumuluzee:
     jetstream: true
     ack-confirmation-timeout: PT5S
     servers:
-      - name: secure
+      - name: main-secure
         addresses:
+          - tls://localhost:4222
+          - tls://localhost:4223
           - tls://localhost:4224
         tls:
           trust-store-path: certs\truststore.jks
@@ -47,8 +49,23 @@ kumuluzee:
           - name: solar
             subjects:
               - solar.energy.*
-              - solar.energy.new.*
               - solar.sendNewPosition
+            retention-policy: interest
+            storage-type: file
+      - name: leaf-secure
+        addresses:
+          - tls://localhost:4225
+          - tls://localhost:4226
+          - tls://localhost:4227
+        tls:
+          trust-store-path: certs\truststore.jks
+          trust-store-password: password2
+          key-store-path: certs\keystore.jks
+          key-store-password: password
+        streams:
+          - name: solar
+            subjects:
+              - solar.energy.new.*
               - solar.position.*
             retention-policy: interest
             storage-type: file

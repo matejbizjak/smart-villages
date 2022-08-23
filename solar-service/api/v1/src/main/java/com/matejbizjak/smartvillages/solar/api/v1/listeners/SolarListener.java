@@ -21,7 +21,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @ApplicationScoped
-@NatsListener(connection = "secure")
+@NatsListener(connection = "main-secure")
 public class SolarListener {
 
     @Inject
@@ -37,14 +37,14 @@ public class SolarListener {
         positionService.sendNewPositions();
     }
 
-    @JetStreamListener(connection = "secure", subject = "solar.energy.new.*", queue = "solar")
+    @JetStreamListener(connection = "leaf-secure", subject = "solar.energy.new.*", queue = "solar")
     public void receiveEnergy(Energy energy, JetStreamMessage msg) {
         String solarId = msg.getSubject().split("\\.")[3];
         LOG.info("Received data from subject " + "solar.energy.new." + solarId);
         energyService.storeEnergy(energy, solarId);
     }
 
-    @JetStreamListener(connection = "secure", subject = "solar.energy.dailyReportReq", queue = "solar")
+    @JetStreamListener(connection = "main-secure", subject = "solar.energy.dailyReportReq", queue = "solar")
     public void receiveDailyUserReportRequest(String payload, JetStreamMessage msg) {  // TODO payload je odveč. lahko popravim knjižnico tako, da sploh ne rabim dat 1. parametra funkciji?
         LOG.info("Received data from subject " + "solar.energy.dailyReportReq");
 //        Instant startOfThePreviousDay = Instant.now().truncatedTo(ChronoUnit.DAYS).minus(1, ChronoUnit.DAYS);

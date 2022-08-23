@@ -25,11 +25,6 @@ public class SolarResource {
     @Inject
     private EnergyService energyService;
 
-//    @Inject
-//    @JetStreamSubscriber(connection = "secure", subject = "solar.energy.*", durable = "solar-energy-sub")
-//    @ConsumerConfig(name = "newMessages")
-//    private JetStreamSubscription solarEnergySubscription;
-
 //    @Context
 //    private SecurityContext securityContext;
 

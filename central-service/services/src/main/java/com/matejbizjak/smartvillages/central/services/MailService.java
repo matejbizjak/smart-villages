@@ -19,7 +19,7 @@ public class MailService {
     private final Logger LOG = LogManager.getLogger(MailService.class.getSimpleName());
 
     @Inject
-    @JetStreamProducer(connection = "secure")
+    @JetStreamProducer(connection = "main-secure")
     private JetStream jetStream;
 
     public void sendEnergyDailyMail(TotalUserEnergyInterval data) {

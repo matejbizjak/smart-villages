@@ -6,8 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="d2af25e9-9f55-4dcd-83aa-3eecae07f562" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/SolarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/SolarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/natsclients/SolarClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/natsclients/SolarClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/SolarSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/SolarSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../environment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/config/leaf-n1.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/config/leaf-n2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/config/leaf-n3.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n3.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/listeners/SolarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/listeners/SolarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/PositionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/PositionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/api/v1/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +69,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Matej/IdeaProjects/smart-villages/environment&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.49655172&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -57,6 +82,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Central Service" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/api/v1/target/api-v1-1.0.0-SNAPSHOT.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Matej\IdeaProjects\smart-villages\central-service" />
@@ -76,7 +109,8 @@
       <updated>1659984408302</updated>
       <workItem from="1659984410182" duration="44858000" />
       <workItem from="1660210775846" duration="2255000" />
-      <workItem from="1661249303866" duration="599000" />
+      <workItem from="1661249303866" duration="3750000" />
+      <workItem from="1661272144881" duration="933000" />
     </task>
     <servers />
   </component>
@@ -93,5 +127,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

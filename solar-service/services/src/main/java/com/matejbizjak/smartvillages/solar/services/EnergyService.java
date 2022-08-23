@@ -40,7 +40,7 @@ public class EnergyService {
     private SolarService solarService;
 
     @Inject
-    @JetStreamProducer(connection = "secure")
+    @JetStreamProducer(connection = "main-secure")
     private JetStream jetStream;
 
     private final Logger LOG = LogManager.getLogger(EnergyService.class.getSimpleName());

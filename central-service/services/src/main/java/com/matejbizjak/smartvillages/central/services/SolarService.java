@@ -17,7 +17,7 @@ import javax.inject.Inject;
 public class SolarService {
 
     @Inject
-    @JetStreamProducer(connection = "secure")
+    @JetStreamProducer(connection = "main-secure")
     private JetStream jetStream;
 
     @Inject

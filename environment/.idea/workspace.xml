@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="Added nats server configurations for the leaf cluster">
+    <list default="true" id="afacfa5c-9332-4eec-ba24-9fad91091eb8" name="Changes" comment="Added MQTT to leaf cluster">
       <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/SolarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/SolarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/natsclients/SolarClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/natsclients/SolarClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/SolarSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/SolarSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/config/leaf-n1.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/leaf-n1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/config/leaf-n2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/leaf-n2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/config/leaf-n3.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nats/config/leaf-n3.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/listeners/SolarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/listeners/SolarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/resources/SolarResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/PositionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/PositionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/api/v1/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +75,14 @@
     </key>
   </component>
   <component name="RunManager" selected="Docker.nats/nats-main-cluster-with-leaf-cluster.yaml: Compose Deployment">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="nats/nats-main-cluster-with-leaf-cluster.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -114,7 +147,8 @@
       <workItem from="1660314288174" duration="525000" />
       <workItem from="1660314842550" duration="604000" />
       <workItem from="1660315474993" duration="6184000" />
-      <workItem from="1661249333984" duration="2512000" />
+      <workItem from="1661249333984" duration="5168000" />
+      <workItem from="1661272134778" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Added nats server configurations for the main cluster">
       <created>1660318629238</created>
@@ -130,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661251415097</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added MQTT to leaf cluster">
+      <created>1661268064149</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661268064149</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +194,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added nats server configurations for the main cluster" />
     <MESSAGE value="Added nats server configurations for the leaf cluster" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added nats server configurations for the leaf cluster" />
+    <MESSAGE value="Added MQTT to leaf cluster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MQTT to leaf cluster" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

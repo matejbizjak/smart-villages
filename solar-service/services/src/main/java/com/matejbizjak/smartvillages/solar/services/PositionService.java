@@ -26,7 +26,7 @@ public class PositionService {
     @Inject
     private SolarService solarService;
     @Inject
-    @JetStreamProducer(connection = "secure")
+    @JetStreamProducer(connection = "leaf-secure")
     private JetStream jetStream;
 
     @PersistenceContext(unitName = "main-jpa-unit")

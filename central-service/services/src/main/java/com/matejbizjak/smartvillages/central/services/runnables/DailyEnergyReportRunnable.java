@@ -2,6 +2,7 @@ package com.matejbizjak.smartvillages.central.services.runnables;
 
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
+import com.kumuluz.ee.logs.enums.LogLevel;
 import com.matejbizjak.smartvillages.central.lib.v1.TotalUserEnergyInterval;
 import com.matejbizjak.smartvillages.central.services.MailService;
 import com.matejbizjak.smartvillages.central.services.UserService;

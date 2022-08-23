@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
+<Configuration name="config-name">
     <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %p %marker %m %X %ex %n"/>
         </Console>
-        <!--<File name="MyFile" fileName="all.log" immediateFlush="false" append="false">-->
-        <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
-        <!--</File>-->
     </Appenders>
     <Loggers>
         <Root level="info">
-            <AppenderRef ref="Console"/>
-            <!--<AppenderRef ref="MyFile"/>-->
+            <AppenderRef ref="console"/>
         </Root>
     </Loggers>
 </Configuration>

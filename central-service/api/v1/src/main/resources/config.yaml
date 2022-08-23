@@ -35,8 +35,10 @@ kumuluzee:
     jetstream: true
     ack-confirmation-timeout: PT5S
     servers:
-      - name: secure
+      - name: main-secure
         addresses:
+          - tls://localhost:4222
+          - tls://localhost:4223
           - tls://localhost:4224
         tls:
           trust-store-path: certs\truststore.jks
