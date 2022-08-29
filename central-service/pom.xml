@@ -60,6 +60,11 @@
                 <groupId>com.matejbizjak.smartvillages.charger</groupId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <artifactId>house-service-lib-v1</artifactId>
+                <groupId>com.matejbizjak.smartvillages.house</groupId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.kumuluz.ee</groupId>

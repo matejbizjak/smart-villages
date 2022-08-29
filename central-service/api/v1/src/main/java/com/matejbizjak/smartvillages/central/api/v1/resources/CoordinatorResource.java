@@ -1,6 +1,7 @@
 package com.matejbizjak.smartvillages.central.api.v1.resources;
 
 import com.matejbizjak.smartvillages.central.services.ChargerService;
+import com.matejbizjak.smartvillages.central.services.HouseService;
 import com.matejbizjak.smartvillages.central.services.SolarService;
 import com.matejbizjak.smartvillages.central.services.UserService;
 import com.matejbizjak.smartvillages.central.services.runnables.DailyEnergyReportRunnable;
@@ -28,6 +29,8 @@ public class CoordinatorResource {
     @Inject
     private ChargerService chargerService;
     @Inject
+    private HouseService houseService;
+    @Inject
     private DailyEnergyReportRunnable dailyEnergyReportRunnable;
 
     @GET
@@ -35,7 +38,7 @@ public class CoordinatorResource {
     public Response startDailyEnergyReport() {
         solarService.startDailyEnergyReportProcess();
         chargerService.startDailyEnergyReportProcess();
-        // TODO other services
+        houseService.startDailyEnergyReportProcess();
 
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
         executorService.schedule(dailyEnergyReportRunnable, 15, TimeUnit.SECONDS);  // TODO 10 min
@@ -48,18 +51,5 @@ public class CoordinatorResource {
     public Response changeSolarPositions() {
         solarService.changeSolarPositions();
         return Response.ok().build();
-    }
-
-    @Inject
-    private UserService userService;
-
-    @GET
-    @Path("/test")
-    public Response test() {
-        try {
-            return Response.ok().entity(userService.getAllUsers()).build();
-        } catch (Exception e) {
-            return Response.serverError().build();
-        }
     }
 }

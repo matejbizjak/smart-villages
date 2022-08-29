@@ -25,6 +25,10 @@
             <artifactId>charger-service-lib-v1</artifactId>
             <groupId>com.matejbizjak.smartvillages.charger</groupId>
         </dependency>
+        <dependency>
+            <artifactId>house-service-lib-v1</artifactId>
+            <groupId>com.matejbizjak.smartvillages.house</groupId>
+        </dependency>
     </dependencies>
 
 </project>

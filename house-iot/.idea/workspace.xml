@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d62c894e-af96-4a7c-b888-278c0b37d659" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/HouseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/HouseSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matejbizjak/smartvillages/houseiot/HouseIotApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/certs/keystore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/certs/truststore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/HouseApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/NatsMapperProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/listeners/HouseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/resources/HouseResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/META-INF/services/com.kumuluz.ee.nats.common.util.NatsObjectMapperProvider" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/certs/keystore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/certs/truststore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/import.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/lib/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/house/lib/v1/EnergyHouseIntervalForHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/house/lib/v1/EnergyHouseIntervalForUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/house/lib/v1/HouseEnergy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/persistence/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/persistence/src/main/java/com/matejbizjak/smartvillages/house/persistence/HouseEnergyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/persistence/src/main/java/com/matejbizjak/smartvillages/house/persistence/HouseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/persistence/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/services/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/services/src/main/java/com/matejbizjak/smartvillages/house/services/EnergyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/services/src/main/java/com/matejbizjak/smartvillages/house/services/HouseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../house-service/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/src/main/java/com/matejbizjak/smartvillages/central/api/v1/resources/CoordinatorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/src/main/java/com/matejbizjak/smartvillages/central/api/v1/resources/CoordinatorResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/lib/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/lib/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/central/lib/v1/TotalUserEnergyInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/central/lib/v1/TotalUserEnergyInterval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-iot/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-iot/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/src/main/java/com/matejbizjak/smartvillages/mail/services/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/src/main/java/com/matejbizjak/smartvillages/mail/services/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-iot/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-iot/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2E2qicn94sFlhOYm4kEtCcb24Gl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Matej/IdeaProjects/smart-villages/house-iot/src/main/resources"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matej\IdeaProjects\smart-villages\house-iot\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.matejbizjak.smartvillages.houseiot" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HouseIotApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.matejbizjak.smartvillages.houseiot.HouseIotApp" />
+      <module name="house-iot" />
+      <option name="PROGRAM_PARAMETERS" value="520cb7af-b986-4415-ba90-111011589a40 password password2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matejbizjak.smartvillages.houseiot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HouseIotApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d62c894e-af96-4a7c-b888-278c0b37d659" name="Changes" comment="" />
+      <created>1661804155533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661804155533</updated>
+      <workItem from="1661804158392" duration="1375000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

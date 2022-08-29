@@ -68,8 +68,8 @@ public class MailService {
 //                data.getUser().getEmail()
 //                , "Daily energy report"
 //                , data.getSum().compareTo(new BigDecimal(0)) > 0 ?
-//                        "Yesterday you have spend more energy that you have produced. \n" + String.format("The amount is %s kWh.", energyWh) :
-//                        "Great! Yesterday you produced more energy that you have spend. " + String.format("The amount is %s kWh.", energyWh));
+//                        "Great! Yesterday you produced more energy that you have spend. " + String.format("The amount is %s kWh.", energyWh)) :
+//                        "Yesterday you have spend more energy that you have produced. \n" + String.format("The amount is %s kWh.", energyWh);
 
         sendDummyMail(data.getUser().getEmail(), energyWh);
     }
@@ -79,8 +79,8 @@ public class MailService {
                         , email
                         , "Daily energy report"
                         , energyKwh.compareTo(new BigDecimal(0)) > 0 ?
-                                "Yesterday you have spend more energy that you have produced. " :
-                                "Great! Yesterday you produced more energy that you have spend. "
+                        "Great! Yesterday you produced more energy that you have spend. " :
+                        "Yesterday you have spend more energy that you have produced. "
                         , String.format("The amount is %s Wh.", energyKwh.toString())
                 )
         );

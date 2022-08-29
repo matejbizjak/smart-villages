@@ -1,0 +1,54 @@
+kumuluzee:
+  name: house-service
+  env:
+    name: dev
+  version: 1.0.0-SNAPSHOT
+  server:
+    base-url: http://localhost:8087
+    http:
+      port: 8087
+  datasources:
+    - jndi-name: jdbc/mainDB
+      connection-url: jdbc:postgresql://localhost:26257/smart_village?sslmode=disable
+      username: root
+      password:
+      pool:
+        max-size: 10
+  openapi:
+    enabled: true
+    ui:
+      enabled: true
+#  security:
+#    keycloak:
+#      json: '{
+#              "realm": "users-realm",
+#              "bearer-only": true,
+#              "auth-server-url": "http://localhost:8080/",
+#              "ssl-required": "external",
+#              "resource": "users-api",
+#              "confidential-port": 0
+#            }'
+
+#               "auth-server-url": "http://localhost:8180/auth",
+#               "auth-server-url": "http://192.168.39.54:31000/auth",
+  nats:
+    jetstream: true
+    ack-confirmation-timeout: PT5S
+    servers:
+      - name: main-secure
+        addresses:
+          - tls://localhost:4222
+          - tls://localhost:4223
+          - tls://localhost:4224
+        tls:
+          trust-store-path: certs\truststore.jks
+          trust-store-password: password2
+          key-store-path: certs\keystore.jks
+          key-store-password: password
+        streams:
+          - name: house
+            subjects:
+              - house.energy.*
+              - house.energy.new.*
+            retention-policy: interest
+            storage-type: file
