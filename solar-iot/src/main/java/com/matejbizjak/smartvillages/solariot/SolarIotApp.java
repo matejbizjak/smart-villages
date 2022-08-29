@@ -55,7 +55,7 @@ public class SolarIotApp {
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
             executorService.scheduleAtFixedRate(new SolarEnergyMeter(mqttClient, "solar/energy/new/" + solarId)
-                    , 0, 15, TimeUnit.SECONDS);
+                    , 0, 1, TimeUnit.SECONDS);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -61,7 +61,7 @@ public class ChargerIotApp {
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
             executorService.scheduleAtFixedRate(new ChargerEnergyMeter(jetStream, "charger.energy.new." + chargerId, vehicle)
-                    , 0, 15, TimeUnit.SECONDS);
+                    , 0, 1, TimeUnit.SECONDS);
         } catch (Exception e) {
             LOG.error("Cannot connect to NATS servers.", e);
             throw new RuntimeException(e);
