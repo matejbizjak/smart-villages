@@ -7,7 +7,7 @@ import com.kumuluz.ee.logs.enums.LogLevel;
 import com.kumuluz.ee.nats.common.util.SerDes;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamProducer;
 import com.kumuluz.ee.nats.jetstream.util.JetStreamMessage;
-import com.matejbizjak.smartvillages.solar.lib.v1.Energy;
+import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForSolar;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForUser;
 import com.matejbizjak.smartvillages.solar.persistence.EnergyEntity;
@@ -43,15 +43,15 @@ public class EnergyService {
 
     private final Logger LOG = LogManager.getLogger(EnergyService.class.getSimpleName());
 
-    public void storeEnergy(Energy energy, String solarId) {
+    public void storeEnergy(SolarEnergy solarEnergy, String solarId) {
         EnergyEntity entity = new EnergyEntity();
         entity.setSolar(solarService.getSolar(solarId));
-        entity.setValue(energy.getValue());
-        entity.setStartTime(energy.getStartTime());
-        entity.setDuration(energy.getDuration());
+        entity.setValue(solarEnergy.getValue());
+        entity.setStartTime(solarEnergy.getStartTime());
+        entity.setDuration(solarEnergy.getDuration());
 
         em.persist(entity);
-        LOG.info(String.format("Stored %s W of energy from solar %s to the database.", energy.getValue(), solarId));
+        LOG.info(String.format("Stored %s W of energy from solar %s to the database.", solarEnergy.getValue(), solarId));
     }
 
     public EnergySolarIntervalForSolar getSolarEnergyDuringTimePeriod(String solarId, Instant startTime, Instant endTime) {

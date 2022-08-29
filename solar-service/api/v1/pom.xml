@@ -18,10 +18,6 @@
             <groupId>com.matejbizjak.smartvillages.solar</groupId>
             <artifactId>services</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.matejbizjak.smartvillages.solar</groupId>
-            <artifactId>solar-service-lib-v1</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.kumuluz.ee</groupId>

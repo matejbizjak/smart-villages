@@ -6,13 +6,10 @@ import com.kumuluz.ee.nats.core.annotations.NatsListener;
 import com.kumuluz.ee.nats.core.annotations.Subject;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamListener;
 import com.kumuluz.ee.nats.jetstream.util.JetStreamMessage;
-import com.matejbizjak.smartvillages.solar.lib.v1.Energy;
+import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForSolar;
-import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForUser;
 import com.matejbizjak.smartvillages.solar.services.EnergyService;
 import com.matejbizjak.smartvillages.solar.services.PositionService;
-import com.matejbizjak.smartvillages.solar.services.SolarService;
-import com.matejbizjak.smartvillages.userlib.v1.User;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -38,10 +35,10 @@ public class SolarListener {
     }
 
     @JetStreamListener(connection = "leaf-secure", subject = "solar.energy.new.*", queue = "solar")
-    public void receiveEnergy(Energy energy, JetStreamMessage msg) {
+    public void receiveEnergy(SolarEnergy solarEnergy, JetStreamMessage msg) {
         String solarId = msg.getSubject().split("\\.")[3];
         LOG.info("Received data from subject " + "solar.energy.new." + solarId);
-        energyService.storeEnergy(energy, solarId);
+        energyService.storeEnergy(solarEnergy, solarId);
     }
 
     @JetStreamListener(connection = "main-secure", subject = "solar.energy.dailyReportReq", queue = "solar")

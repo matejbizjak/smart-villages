@@ -34,7 +34,7 @@ public class VehicleResource {
 
     @GET
 //    @RolesAllowed(AuthRole.ADMIN)
-    public Response getAllVehicle() {
+    public Response getAllVehicles() {
 //            Solar user = userService.getUser(userId, getKeycloakSecurityContext().getTokenString());
         try {
             List<VehicleEntity> vehicleEntityList = vehicleService.getAll();

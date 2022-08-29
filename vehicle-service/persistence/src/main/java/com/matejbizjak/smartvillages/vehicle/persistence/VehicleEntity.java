@@ -13,8 +13,8 @@ import java.time.Instant;
 })
 public class VehicleEntity {
 
-    public static final String FIND_ALL = "Solar.findAll";
-    public static final String FIND_FOR_USER = "Solar.findForUser";
+    public static final String FIND_ALL = "Vehicle.findAll";
+    public static final String FIND_FOR_USER = "Vehicle.findForUser";
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -27,9 +27,6 @@ public class VehicleEntity {
 
     @Column(name = "registration_number")
     private String registrationNumber;
-
-    @Column(name = "first_registration_date")
-    private Instant firstRegistrationDate;
 
     public String getId() {
         return id;
@@ -53,13 +50,5 @@ public class VehicleEntity {
 
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
-    }
-
-    public Instant getFirstRegistrationDate() {
-        return firstRegistrationDate;
-    }
-
-    public void setFirstRegistrationDate(Instant firstRegistrationDate) {
-        this.firstRegistrationDate = firstRegistrationDate;
     }
 }

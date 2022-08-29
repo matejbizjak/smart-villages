@@ -34,7 +34,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.matejbizjak.smartvillages.solar</groupId>
-                <artifactId>persistence</artifactId>
+                <artifactId>solar-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -45,7 +45,7 @@
             <dependency>
                 <groupId>com.matejbizjak.smartvillages.solar</groupId>
                 <artifactId>solar-service-lib-v1</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.matejbizjak.smartvillages.user</groupId>

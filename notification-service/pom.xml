@@ -34,7 +34,7 @@
         <dependency>
             <groupId>com.matejbizjak.smartvillages.central</groupId>
             <artifactId>central-service-lib-v1</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>

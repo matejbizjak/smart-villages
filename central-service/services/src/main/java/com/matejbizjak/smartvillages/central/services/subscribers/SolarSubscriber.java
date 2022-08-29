@@ -31,10 +31,10 @@ public class SolarSubscriber {
     private final Logger LOG = LogManager.getLogger(SolarSubscriber.class.getSimpleName());
 
     public Map<String, EnergySolarIntervalForUser> pullDailyUserSolarEnergy(List<User> users) {
-        LOG.info("Pulling messages from subject" + "solar.energy.dailyReportRes");
+        LOG.info("Pulling messages from subject " + "solar.energy.dailyReportRes");
         Map<String, EnergySolarIntervalForUser> userIdSolarMap = new HashMap<>();
         if (dailyUserEnergySubscription != null) {
-            Iterator<Message> iterator = dailyUserEnergySubscription.iterate(users.size(), Duration.ofSeconds(10));
+            Iterator<Message> iterator = dailyUserEnergySubscription.iterate(users.size(), Duration.ofSeconds(5));
             iterator.forEachRemaining(message -> {
                 try {
                     EnergySolarIntervalForSolar solarEnergy = SerDes.deserialize(message.getData(), EnergySolarIntervalForSolar.class);
@@ -53,6 +53,8 @@ public class SolarSubscriber {
                         userSolarEnergy.setEnergySolarList(solarEnergyList);
 
                         userSolarEnergy.setSum(new BigDecimal(0));
+
+//                        userIdSolarMap.put(userSolarEnergy.getUser().getId(), userSolarEnergy);
                     }
 
                     userSolarEnergy.getEnergySolarList().add(solarEnergy);
@@ -68,6 +70,7 @@ public class SolarSubscriber {
                     message.ackSync(Duration.ofSeconds(5));
                 } catch (IOException | InterruptedException | TimeoutException e) {
                     message.nak();
+                    LOG.error("There was a problem at pulling messages.", e);
                     throw new RuntimeException(e);
                 }
             });

@@ -17,12 +17,20 @@
             <groupId>com.matejbizjak.smartvillages.central</groupId>
         </dependency>
         <dependency>
+            <groupId>com.matejbizjak.smartvillages.libutils</groupId>
+            <artifactId>lib-utils</artifactId>
+        </dependency>
+        <dependency>
             <artifactId>user-service-lib-v1</artifactId>
             <groupId>com.matejbizjak.smartvillages.user</groupId>
         </dependency>
         <dependency>
             <artifactId>solar-service-lib-v1</artifactId>
             <groupId>com.matejbizjak.smartvillages.solar</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>charger-service-lib-v1</artifactId>
+            <groupId>com.matejbizjak.smartvillages.charger</groupId>
         </dependency>
 
         <dependency>
@@ -37,10 +45,6 @@
             <groupId>com.kumuluz.ee.rest-client</groupId>
             <artifactId>kumuluzee-rest-client</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.kumuluz.ee.rest</groupId>-->
-<!--            <artifactId>kumuluzee-rest-core</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-json-p-jsonp</artifactId>
@@ -53,12 +57,10 @@
         <dependency>
             <groupId>com.kumuluz.ee.nats</groupId>
             <artifactId>kumuluzee-nats-core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.kumuluz.ee.nats</groupId>
             <artifactId>kumuluzee-nats-jetstream</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

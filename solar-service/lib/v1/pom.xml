@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.matejbizjak.smartvillages.solar</groupId>
-            <artifactId>persistence</artifactId>
+            <artifactId>solar-persistence</artifactId>
         </dependency>
         <dependency>
             <groupId>com.matejbizjak.smartvillages.user</groupId>

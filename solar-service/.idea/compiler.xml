@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="persistence" />
+        <module name="solar-persistence" />
         <module name="services" />
         <module name="api-v1" />
         <module name="solar-service-lib-v1" />

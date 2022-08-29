@@ -21,6 +21,10 @@
             <artifactId>solar-service-lib-v1</artifactId>
             <groupId>com.matejbizjak.smartvillages.solar</groupId>
         </dependency>
+        <dependency>
+            <artifactId>charger-service-lib-v1</artifactId>
+            <groupId>com.matejbizjak.smartvillages.charger</groupId>
+        </dependency>
     </dependencies>
 
 </project>

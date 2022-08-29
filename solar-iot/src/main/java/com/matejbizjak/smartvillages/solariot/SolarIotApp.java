@@ -5,7 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
-import com.matejbizjak.smartvillages.solar.lib.v1.Energy;
+import com.matejbizjak.smartvillages.libutils.SslUtil;
+import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -53,8 +54,8 @@ public class SolarIotApp {
             LOG.info(String.format("Subscribed to MQTT topic %s.", "solar/position/" + solarId));
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
-            executorService.scheduleAtFixedRate(new EnergyMeter(mqttClient, "solar/energy/new/" + solarId)
-                    , 0, 1, TimeUnit.SECONDS);
+            executorService.scheduleAtFixedRate(new SolarEnergyMeter(mqttClient, "solar/energy/new/" + solarId)
+                    , 0, 15, TimeUnit.SECONDS);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -64,12 +65,12 @@ public class SolarIotApp {
         LOG.info(String.format("Changing position of solar %s to (%s, %s).", solarId, newPosition.x, newPosition.y));
     }
 
-    static class EnergyMeter implements Runnable {
+    static class SolarEnergyMeter implements Runnable {
 
         private final MqttClient mqttClient;
         private final String topic;
 
-        public EnergyMeter(MqttClient mqttClient, String topic) {
+        public SolarEnergyMeter(MqttClient mqttClient, String topic) {
             this.mqttClient = mqttClient;
             this.topic = topic;
         }
@@ -85,13 +86,13 @@ public class SolarIotApp {
         }
 
         private MqttMessage readMeasurements() {
-            Energy energy = new Energy();
-            energy.setStartTime(Instant.now().truncatedTo(ChronoUnit.SECONDS));
-            energy.setValue(generateRandomBigDecimalFromRange(new BigDecimal(180), new BigDecimal(190)));
-            energy.setDuration(Duration.ofSeconds(1));
+            SolarEnergy SolarEnergy = new SolarEnergy();
+            SolarEnergy.setStartTime(Instant.now().truncatedTo(ChronoUnit.SECONDS));
+            SolarEnergy.setValue(generateRandomBigDecimalFromRange(new BigDecimal(180), new BigDecimal(190)));
+            SolarEnergy.setDuration(Duration.ofSeconds(1));
 
             try {
-                return new MqttMessage(objectMapper.writeValueAsBytes(energy));
+                return new MqttMessage(objectMapper.writeValueAsBytes(SolarEnergy));
             } catch (JsonProcessingException e) {
                 throw new RuntimeException(e);
             }

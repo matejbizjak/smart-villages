@@ -1,6 +1,6 @@
 package com.matejbizjak.smartvillages.central.api.v1.resources;
 
-import com.matejbizjak.smartvillages.central.services.EnergyService;
+import com.matejbizjak.smartvillages.central.services.ChargerService;
 import com.matejbizjak.smartvillages.central.services.SolarService;
 import com.matejbizjak.smartvillages.central.services.UserService;
 import com.matejbizjak.smartvillages.central.services.runnables.DailyEnergyReportRunnable;
@@ -26,12 +26,15 @@ public class CoordinatorResource {
     @Inject
     private SolarService solarService;
     @Inject
+    private ChargerService chargerService;
+    @Inject
     private DailyEnergyReportRunnable dailyEnergyReportRunnable;
 
     @GET
     @Path("/dailyEnergyReport")
     public Response startDailyEnergyReport() {
         solarService.startDailyEnergyReportProcess();
+        chargerService.startDailyEnergyReportProcess();
         // TODO other services
 
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();

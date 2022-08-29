@@ -36,7 +36,7 @@ public class EnergyEntity {
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name = "solar", referencedColumnName = "solar_id")
+    @JoinColumn(name = "solar_id", referencedColumnName = "solar_id")
     private SolarEntity solar;
 
     @Column(name = "start_time")
