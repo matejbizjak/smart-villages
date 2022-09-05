@@ -75,6 +75,37 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <to>
+                        <image>docker.io/matejbizjak/smart-villages-house-service</image>
+                    </to>
+                    <from>
+                        <image>eclipse-temurin:11-jre</image>
+                    </from>
+                    <container>
+                        <environment>
+                            <KUMULUZEE_DATASOURCES0_CONNECTIONURL>jdbc:postgresql://roach1:26257/smart_village?sslmode=disable</KUMULUZEE_DATASOURCES0_CONNECTIONURL>
+                            <KUMULUZEE_DATASOURCES0_USERNAME>root</KUMULUZEE_DATASOURCES0_USERNAME>
+                            <KUMULUZEE_NATS_SERVERS0_ADDRESSES0>tls://nats-nats-main-n1-1:4222</KUMULUZEE_NATS_SERVERS0_ADDRESSES0>
+                            <KUMULUZEE_NATS_SERVERS0_ADDRESSES1>tls://nats-nats-main-n2-1:4222</KUMULUZEE_NATS_SERVERS0_ADDRESSES1>
+                            <KUMULUZEE_NATS_SERVERS0_ADDRESSES2>tls://nats-nats-main-n3-1:4222</KUMULUZEE_NATS_SERVERS0_ADDRESSES2>
+                        </environment>
+                    </container>
+                    <containerizingMode>packaged</containerizingMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 

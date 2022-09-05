@@ -26,7 +26,7 @@ import java.util.concurrent.TimeoutException;
 public class ChargerSubscriber {
 
     @Inject
-    @JetStreamSubscriber(connection = "main-secure", subject = "charger.energy.dailyReportRes", durable = "charger_energy_daily_user_pull")
+    @JetStreamSubscriber(connection = "main-secure", stream = "charger", subject = "charger.energy.dailyReportRes", durable = "charger_energy_daily_user_pull")
     // TODO dodaj consumer nastavitev tako, da zavrne vsa sporočila starejša od par ur???
     private JetStreamSubscription dailyUserEnergySubscription;
 

@@ -29,6 +29,7 @@
         <kumuluzee-openapi.version>1.0.1</kumuluzee-openapi.version>
         <kumuluzee-rest-client.version>1.4.1.2</kumuluzee-rest-client.version>
         <postgresql.version>42.4.1</postgresql.version>
+        <jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
     </properties>
 
     <dependencyManagement>

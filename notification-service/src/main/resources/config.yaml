@@ -13,6 +13,8 @@ kumuluzee:
     servers:
       - name: secure
         addresses:
+          - tls://localhost:4222
+          - tls://localhost:4223
           - tls://localhost:4224
         tls:
           trust-store-path: certs\truststore.jks
@@ -23,8 +25,8 @@ kumuluzee:
           - name: notification
             subjects:
               - mail.dailyUsage
-            retention-policy: interest
             storage-type: file
+            max-age: PT12H
 
 email-props:
   host: smtp.gmail.com

@@ -6,7 +6,7 @@ services:
       - "4222:4222"
       - "8222:8222"
     command: "-c /etc/nats/main-n1.conf"
-    networks: ["nats"]
+    networks: ["smartvillageapp"]
     volumes:
       - ./config/:/etc/nats
       - ../certs/:/etc/nats/certs
@@ -15,7 +15,7 @@ services:
     ports:
       - "4223:4222"
     command: "-c /etc/nats/main-n2.conf"
-    networks: ["nats"]
+    networks: ["smartvillageapp"]
     volumes:
       - ./config/:/etc/nats
       - ../certs/:/etc/nats/certs
@@ -24,7 +24,7 @@ services:
     ports:
       - "4224:4222"
     command: "-c /etc/nats/main-n3.conf"
-    networks: ["nats"]
+    networks: ["smartvillageapp"]
     volumes:
       - ./config/:/etc/nats
       - ../certs/:/etc/nats/certs
@@ -34,11 +34,11 @@ services:
       - "4225:4222"
       - "1883:1883"
     command: "-c /etc/nats/single-leaf.conf"
-    networks: [ "nats" ]
+    networks: [ "smartvillageapp" ]
     volumes:
       - ./config/:/etc/nats
       - ../certs/:/etc/nats/certs
 
 networks:
-  nats:
-    name: nats
+  smartvillageapp:
+    name: smartvillageapp

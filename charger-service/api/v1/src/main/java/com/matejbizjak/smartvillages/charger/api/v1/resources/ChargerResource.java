@@ -1,5 +1,7 @@
 package com.matejbizjak.smartvillages.charger.api.v1.resources;
 
+import com.matejbizjak.smartvillages.charger.persistence.ChargerEntity;
+import com.matejbizjak.smartvillages.charger.services.ChargerService;
 import com.matejbizjak.smartvillages.charger.services.subscribers.ChargerSubscriber;
 import com.matejbizjak.smartvillages.vehicle.lib.v1.Vehicle;
 
@@ -17,6 +19,21 @@ public class ChargerResource {
 
     @Inject
     private ChargerSubscriber chargerSubscriber;
+    @Inject
+    private ChargerService chargerService;
+
+    @GET
+    @Path("/{chargerId}")
+//    @RolesAllowed(AuthRole.ADMIN)
+    public Response getCharger(@PathParam("chargerId") String chargerId) {
+//            Solar user = userService.getUser(userId, getKeycloakSecurityContext().getTokenString());
+        try {
+            ChargerEntity chargerEntity = chargerService.getCharger(chargerId);
+            return Response.status(Response.Status.OK).entity(chargerEntity).build();
+        } catch (Exception e) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(e).build();
+        }
+    }
 
     @GET
     @Path("/status/{chargerId}")

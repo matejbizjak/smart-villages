@@ -45,12 +45,7 @@ kumuluzee:
           trust-store-password: password2
           key-store-path: certs\keystore.jks
           key-store-password: password
-        streams:
-          - name: solar
-            subjects:
-              - solar.energy.*
-              - solar.energy.new.*
-              - solar.sendNewPosition
-              - solar.position.*
-            retention-policy: interest
-            storage-type: file
+
+app-urls:
+  user-api: http://localhost:8081/
+  vehicle-api: http://localhost:8085/

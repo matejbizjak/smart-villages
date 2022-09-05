@@ -27,6 +27,7 @@
         <kumuluzee-openapi.version>1.0.1</kumuluzee-openapi.version>
         <kumuluzee-rest-client.version>1.4.1.2</kumuluzee-rest-client.version>
         <kumuluzee-rest.version>1.5.1</kumuluzee-rest.version>
+        <jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
     </properties>
 
     <dependencyManagement>

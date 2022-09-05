@@ -3,7 +3,7 @@ package com.matejbizjak.smartvillages.charger.services.subscribers;
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.nats.common.util.SerDes;
-import com.kumuluz.ee.nats.jetstream.annotations.JetStreamProducer;
+import com.kumuluz.ee.nats.jetstream.annotations.JetStreamDynamicConsumer;
 import com.matejbizjak.smartvillages.charger.services.VehicleService;
 import com.matejbizjak.smartvillages.vehicle.lib.v1.Vehicle;
 import io.nats.client.*;
@@ -22,7 +22,7 @@ public class ChargerSubscriber {
     @Inject
     private VehicleService vehicleService;
     @Inject
-    @JetStreamProducer(connection = "main-secure")
+    @JetStreamDynamicConsumer(connection = "main-secure")
     private JetStream jetStream;
 
 //    // TODO ne morem nastaviti dinamičnih subjectov na ta način

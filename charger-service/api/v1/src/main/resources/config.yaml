@@ -50,12 +50,12 @@ kumuluzee:
             subjects:
               - charger.energy.*
               - charger.energy.new.*
-            retention-policy: interest
             storage-type: file
+            max-age: PT12H
           - name: chargerReplay
             subjects:
               - charger.charging.>
             storage-type: file
-    consumer-configuration:
-      - name: last
-        deliver-policy: last
+
+app-urls:
+  vehicle-api: http://localhost:8085/

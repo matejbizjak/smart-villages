@@ -5,7 +5,7 @@ import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.nats.core.annotations.NatsListener;
 import com.kumuluz.ee.nats.core.annotations.Subject;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamListener;
-import com.kumuluz.ee.nats.jetstream.util.JetStreamMessage;
+import com.kumuluz.ee.nats.jetstream.wrappers.JetStreamMessage;
 import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForSolar;
 import com.matejbizjak.smartvillages.solar.services.EnergyService;
@@ -34,25 +34,23 @@ public class SolarListener {
         positionService.sendNewPositions();
     }
 
-    @JetStreamListener(connection = "leaf-secure", subject = "solar.energy.new.*", queue = "solar")
-    public void receiveEnergy(SolarEnergy solarEnergy, JetStreamMessage msg) {
-        String solarId = msg.getSubject().split("\\.")[3];
-        LOG.info("Received data from subject " + "solar.energy.new." + solarId);
-        energyService.storeEnergy(solarEnergy, solarId);
-    }
-
-    @JetStreamListener(connection = "main-secure", subject = "solar.energy.dailyReportReq", queue = "solar")
-    public void receiveDailyUserReportRequest(String payload, JetStreamMessage msg) {  // TODO payload je odveč. lahko popravim knjižnico tako, da sploh ne rabim dat 1. parametra funkciji?
+    @JetStreamListener(connection = "main-secure", stream = "solar", subject = "solar.energy.dailyReportReq", queue = "solar", durable = "energyReportReqConsumer")
+    public void receiveDailyUserReportRequest(String payload, JetStreamMessage msg) {
         LOG.info("Received data from subject " + "solar.energy.dailyReportReq");
 //        Instant startOfThePreviousDay = Instant.now().truncatedTo(ChronoUnit.DAYS).minus(1, ChronoUnit.DAYS);
 //        Instant endOfThePreviousDay = Instant.now().truncatedTo(ChronoUnit.DAYS).minus(1, ChronoUnit.NANOS);
         Instant startOfThePreviousDay = Instant.now().truncatedTo(ChronoUnit.DAYS);  // TODO this is actually the current day - easier for testing
         Instant endOfThePreviousDay = Instant.now().truncatedTo(ChronoUnit.DAYS).plus(1, ChronoUnit.DAYS).minus(1, ChronoUnit.NANOS);
-        System.out.println(startOfThePreviousDay);
-        System.out.println(endOfThePreviousDay);  // TODO remove
         List<EnergySolarIntervalForSolar> energySolarList = energyService.getAllSolarEnergyDuringTimePeriod(startOfThePreviousDay
                 , endOfThePreviousDay, msg);
 
         energyService.sendDailyUserReportResponse(energySolarList);
+    }
+
+    @JetStreamListener(connection = "leaf-secure", stream = "solar", subject = "solar.energy.new.*", queue = "solar", durable = "energyConsumer")
+    public void receiveEnergy(SolarEnergy solarEnergy, JetStreamMessage msg) {
+        String solarId = msg.getSubject().split("\\.")[3];
+        LOG.info("Received data from subject " + "solar.energy.new." + solarId);
+        energyService.storeEnergy(solarEnergy, solarId);
     }
 }

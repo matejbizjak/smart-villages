@@ -18,6 +18,7 @@ import java.math.RoundingMode;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -35,14 +36,14 @@ public class SolarIotApp {
 
         String publisherId = "solar_iot_" + solarId;
         try {
-            MqttClient mqttClient = new MqttClient("ssl://localhost:1883", publisherId);
+            MqttClient mqttClient = new MqttClient(System.getenv("NATS_LEAF_ADDRESSES0_MQTT"), publisherId);
 
             MqttConnectOptions options = new MqttConnectOptions();
             options.setAutomaticReconnect(true);
             options.setCleanSession(false);
             options.setConnectionTimeout(10);
-            options.setSocketFactory(new SslUtil("certs/keystore.jks", keyStorePassword
-                    , "certs/truststore.jks", trustStorePassword).createSocketFactory());
+//            options.setSocketFactory(new SslUtil("certs/keystore.jks", keyStorePassword
+//                    , "certs/truststore.jks", trustStorePassword).createSocketFactory());
 
             mqttClient.connect(options);
             LOG.info(String.format("Solar %s was successfully connected to MQTT server.", solarId));
@@ -55,7 +56,7 @@ public class SolarIotApp {
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
             executorService.scheduleAtFixedRate(new SolarEnergyMeter(mqttClient, "solar/energy/new/" + solarId)
-                    , 0, 1, TimeUnit.SECONDS);
+                    , 0, 15, TimeUnit.SECONDS);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

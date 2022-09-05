@@ -16,6 +16,7 @@
         <kumuluzee.version>4.1.0</kumuluzee.version>
         <kumuluzee-logs.version>1.4.6</kumuluzee-logs.version>
         <kumuluzee-nats.version>1.0.0-SNAPSHOT</kumuluzee-nats.version>
+        <jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -85,6 +86,35 @@
                         <id>package</id>
                         <goals>
                             <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <to>
+                        <image>docker.io/matejbizjak/smart-villages-notification-service</image>
+                    </to>
+                    <from>
+                        <image>eclipse-temurin:11-jre</image>
+                    </from>
+                    <container>
+                        <environment>
+                            <KUMULUZEE_NATS_SERVERS0_ADDRESSES0>tls://nats-nats-main-n1-1:4222</KUMULUZEE_NATS_SERVERS0_ADDRESSES0>
+                            <KUMULUZEE_NATS_SERVERS0_ADDRESSES1>tls://nats-nats-main-n2-1:4222</KUMULUZEE_NATS_SERVERS0_ADDRESSES1>
+                            <KUMULUZEE_NATS_SERVERS0_ADDRESSES2>tls://nats-nats-main-n3-1:4222</KUMULUZEE_NATS_SERVERS0_ADDRESSES2>
+                        </environment>
+                    </container>
+                    <containerizingMode>packaged</containerizingMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
                         </goals>
                     </execution>
                 </executions>

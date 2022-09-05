@@ -5,66 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d62c894e-af96-4a7c-b888-278c0b37d659" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/HouseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/HouseSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matejbizjak/smartvillages/houseiot/HouseIotApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/certs/keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/certs/truststore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/HouseApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/NatsMapperProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/listeners/HouseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/resources/HouseResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/META-INF/services/com.kumuluz.ee.nats.common.util.NatsObjectMapperProvider" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/certs/keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/certs/truststore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/import.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/lib/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/house/lib/v1/EnergyHouseIntervalForHouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/house/lib/v1/EnergyHouseIntervalForUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/house/lib/v1/HouseEnergy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/persistence/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/persistence/src/main/java/com/matejbizjak/smartvillages/house/persistence/HouseEnergyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/persistence/src/main/java/com/matejbizjak/smartvillages/house/persistence/HouseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/persistence/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/services/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/services/src/main/java/com/matejbizjak/smartvillages/house/services/EnergyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/services/src/main/java/com/matejbizjak/smartvillages/house/services/HouseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../house-service/services/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../environment/app/run-app.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../environment/cockroachdb/run-docker.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-service/lib.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-service/persistence/persistence.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-service/user-service-lib-v1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/src/main/java/com/matejbizjak/smartvillages/central/api/v1/resources/CoordinatorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/src/main/java/com/matejbizjak/smartvillages/central/api/v1/resources/CoordinatorResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../central-service/lib/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/lib/v1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../central-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/central/lib/v1/TotalUserEnergyInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/lib/v1/src/main/java/com/matejbizjak/smartvillages/central/lib/v1/TotalUserEnergyInterval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../central-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../central-service/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/runnables/DailyEnergyReportRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../charger-iot/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-iot/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/natsclients/SolarClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/natsclients/SolarClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/ChargerSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/HouseSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../central-service/services/src/main/java/com/matejbizjak/smartvillages/central/services/subscribers/SolarSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-iot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-iot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-iot/src/main/java/com/matejbizjak/smartvillages/chargeriot/ChargerIotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-iot/src/main/java/com/matejbizjak/smartvillages/chargeriot/ChargerIotApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-service/api/v1/src/main/java/com/matejbizjak/smartvillages/charger/api/v1/listeners/ChargerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-service/api/v1/src/main/java/com/matejbizjak/smartvillages/charger/api/v1/listeners/ChargerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-service/services/src/main/java/com/matejbizjak/smartvillages/charger/services/EnergyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-service/services/src/main/java/com/matejbizjak/smartvillages/charger/services/EnergyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../charger-service/services/src/main/java/com/matejbizjak/smartvillages/charger/services/subscribers/ChargerSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../charger-service/services/src/main/java/com/matejbizjak/smartvillages/charger/services/subscribers/ChargerSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../environment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/config/leaf-n1.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/config/leaf-n2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/config/leaf-n3.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/config/leaf-n3.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/nats-main-cluster-with-leaf-cluster.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/nats-main-cluster-with-leaf-cluster.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/nats-main-cluster-with-leaf-single.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/nats-main-cluster-with-leaf-single.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment/nats/nats-main-cluster.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment/nats/nats-main-cluster.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matejbizjak/smartvillages/houseiot/HouseIotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matejbizjak/smartvillages/houseiot/HouseIotApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../house-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../house-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/listeners/HouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/java/com/matejbizjak/smartvillages/house/api/v1/listeners/HouseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../house-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../house-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../house-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../house-service/services/src/main/java/com/matejbizjak/smartvillages/house/services/EnergyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../house-service/services/src/main/java/com/matejbizjak/smartvillages/house/services/EnergyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notification-service/src/main/java/com/matejbizjak/smartvillages/mail/services/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/src/main/java/com/matejbizjak/smartvillages/mail/services/MailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solar-iot/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-iot/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification-service/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../notification-service/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-iot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-iot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-iot/src/main/java/com/matejbizjak/smartvillages/solariot/SolarIotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-iot/src/main/java/com/matejbizjak/smartvillages/solariot/SolarIotApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/listeners/SolarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/java/com/matejbizjak/smartvillages/solar/api/v1/listeners/SolarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/api/v1/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/services/src/main/java/com/matejbizjak/smartvillages/solar/services/EnergyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/api/v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/api/v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vehicle-service/api/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vehicle-service/api/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vehicle-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vehicle-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,14 +76,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Matej/IdeaProjects/smart-villages/house-iot/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matej/IdeaProjects/smart-villages/house-iot/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Matej\IdeaProjects\smart-villages\house-iot\src\main\resources" />
@@ -101,6 +94,11 @@
   </component>
   <component name="RunManager">
     <configuration name="HouseIotApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="NATS_MAIN_ADDRESSES0" value="tls://localhost:4222" />
+        <env name="NATS_MAIN_ADDRESSES1" value="tls://localhost:4223" />
+        <env name="NATS_MAIN_ADDRESSES2" value="tls://localhost:4224" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="com.matejbizjak.smartvillages.houseiot.HouseIotApp" />
       <module name="house-iot" />
       <option name="PROGRAM_PARAMETERS" value="520cb7af-b986-4415-ba90-111011589a40 password password2" />
@@ -110,12 +108,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,6 +127,11 @@
       <option name="presentableId" value="Default" />
       <updated>1661804155533</updated>
       <workItem from="1661804158392" duration="1375000" />
+      <workItem from="1661875764119" duration="1437000" />
+      <workItem from="1662031326613" duration="599000" />
+      <workItem from="1662116886312" duration="1633000" />
+      <workItem from="1662239714002" duration="1882000" />
+      <workItem from="1662390466989" duration="4000" />
     </task>
     <servers />
   </component>

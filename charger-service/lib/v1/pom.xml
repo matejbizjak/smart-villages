@@ -24,6 +24,11 @@
             <groupId>com.matejbizjak.smartvillages.user</groupId>
             <artifactId>user-service-lib-v1</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

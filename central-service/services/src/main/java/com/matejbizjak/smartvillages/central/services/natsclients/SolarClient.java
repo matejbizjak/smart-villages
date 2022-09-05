@@ -7,5 +7,5 @@ import com.kumuluz.ee.nats.core.annotations.Subject;
 public interface SolarClient {
 
     @Subject(value = "solar.sendNewPosition")
-    void changeSolarPositions(String msg);  // TODO A bi šlo da sploh ne bi bilo parametra? Da se ne bi poslal payload.
+    void changeSolarPositions(String msg);
 }

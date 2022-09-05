@@ -6,7 +6,7 @@ import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.logs.enums.LogLevel;
 import com.kumuluz.ee.nats.common.util.SerDes;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamProducer;
-import com.kumuluz.ee.nats.jetstream.util.JetStreamMessage;
+import com.kumuluz.ee.nats.jetstream.wrappers.JetStreamMessage;
 import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForSolar;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForUser;

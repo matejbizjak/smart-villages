@@ -45,9 +45,9 @@ public class ChargerIotApp {
             throw new RuntimeException(e);
         }
         Options options = new Options.Builder()
-                .server("tls://localhost:4222")
-                .server("tls://localhost:4223")
-                .server("tls://localhost:4224")
+                .server(System.getenv("NATS_MAIN_ADDRESSES0"))
+                .server(System.getenv("NATS_MAIN_ADDRESSES1"))
+                .server(System.getenv("NATS_MAIN_ADDRESSES2"))
                 .sslContext(sslContext)
                 .build();
         try {
@@ -61,9 +61,9 @@ public class ChargerIotApp {
 
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
             executorService.scheduleAtFixedRate(new ChargerEnergyMeter(jetStream, "charger.energy.new." + chargerId, vehicle)
-                    , 0, 1, TimeUnit.SECONDS);
+                    , 0, 15, TimeUnit.SECONDS);
         } catch (Exception e) {
-            LOG.error("Cannot connect to NATS servers.", e);
+            LOG.error(e);
             throw new RuntimeException(e);
         }
     }

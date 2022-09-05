@@ -48,7 +48,8 @@ kumuluzee:
         streams:
           - name: house
             subjects:
-              - house.energy.*
+              - house.energy.dailyReportReq
+              - house.energy.dailyReportRes
               - house.energy.new.*
-            retention-policy: interest
             storage-type: file
+            max-age: PT12H

@@ -50,8 +50,8 @@ kumuluzee:
             subjects:
               - solar.energy.*
               - solar.sendNewPosition
-            retention-policy: interest
             storage-type: file
+            max-age: PT12H
       - name: leaf-secure
         addresses:
           - tls://localhost:4225
@@ -67,5 +67,5 @@ kumuluzee:
             subjects:
               - solar.energy.new.*
               - solar.position.*
-            retention-policy: interest
             storage-type: file
+            max-age: PT12H

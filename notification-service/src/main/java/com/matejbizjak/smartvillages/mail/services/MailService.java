@@ -3,7 +3,7 @@ package com.matejbizjak.smartvillages.mail.services;
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamListener;
-import com.kumuluz.ee.nats.jetstream.util.JetStreamMessage;
+import com.kumuluz.ee.nats.jetstream.wrappers.JetStreamMessage;
 import com.matejbizjak.smartvillages.central.lib.v1.TotalUserEnergyInterval;
 import com.matejbizjak.smartvillages.mail.config.EmailProperties;
 
@@ -60,7 +60,7 @@ public class MailService {
         }
     }
 
-    @JetStreamListener(connection = "secure", subject = "mail.dailyUsage", queue = "mail")
+    @JetStreamListener(connection = "secure", stream = "notification", subject = "mail.dailyUsage", queue = "mail", durable = "dailyUsageNotification")
     public void receiveDailyEnergyUsageData(TotalUserEnergyInterval data, JetStreamMessage msg) {
         // TODO create graphs from data and add them to the mail body
         BigDecimal energyWh = data.getSum().divide(new BigDecimal(3600), 4, RoundingMode.HALF_UP);

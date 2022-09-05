@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "3efc3d70-c053-429e-9a57-ab271cba9075",
+		"name": "Smart Village",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8309903"
+	},
+	"item": [
+		{
+			"name": "central",
+			"item": [
+				{
+					"name": "coordinate",
+					"item": [
+						{
+							"name": "dailyEnergyReport",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{centralUrl}}/{{version}}/coordinate/dailyEnergyReport",
+									"host": [
+										"{{centralUrl}}"
+									],
+									"path": [
+										"{{version}}",
+										"coordinate",
+										"dailyEnergyReport"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeSolarPositions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{centralUrl}}/{{version}}/coordinate/changeSolarPositions",
+									"host": [
+										"{{centralUrl}}"
+									],
+									"path": [
+										"{{version}}",
+										"coordinate",
+										"changeSolarPositions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "charger",
+			"item": [
+				{
+					"name": "getCurrentChargingState",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chargerUrl}}/{{version}}/charger/status/520cb7af-b986-4415-ba90-111c1a589a40",
+							"host": [
+								"{{chargerUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"charger",
+								"status",
+								"520cb7af-b986-4415-ba90-111c1a589a40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCharger",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chargerUrl}}/{{version}}/charger/520cb7af-b986-4415-ba90-111c1a589a40",
+							"host": [
+								"{{chargerUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"charger",
+								"520cb7af-b986-4415-ba90-111c1a589a40"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "solar",
+			"item": [
+				{
+					"name": "getSolar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{solarUrl}}/{{version}}/solar/520cb7af-b986-4415-ba90-ba3c1a589a40",
+							"host": [
+								"{{solarUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"solar",
+								"520cb7af-b986-4415-ba90-ba3c1a589a40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSolarEnergy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{solarUrl}}/{{version}}/solar/energy/520cb7af-b986-4415-ba90-ba3c1a589a40?startTime=2022-08-08T13:23:00Z&endTime=2022-08-08T20:30:00Z",
+							"host": [
+								"{{solarUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"solar",
+								"energy",
+								"520cb7af-b986-4415-ba90-ba3c1a589a40"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "2022-08-08T13:23:00Z"
+								},
+								{
+									"key": "endTime",
+									"value": "2022-08-08T20:30:00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "house",
+			"item": [
+				{
+					"name": "getHouse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{houseUrl}}/{{version}}/house/520cb7af-b986-4415-ba90-111011589a40",
+							"host": [
+								"{{houseUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"house",
+								"520cb7af-b986-4415-ba90-111011589a40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHouseEnergy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{houseUrl}}/{{version}}/house/energy/520cb7af-b986-4415-ba90-111011589a40?startTime=2022-08-08T13:23:00Z&endTime=2022-08-08T20:30:00Z",
+							"host": [
+								"{{houseUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"house",
+								"energy",
+								"520cb7af-b986-4415-ba90-111011589a40"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "2022-08-08T13:23:00Z"
+								},
+								{
+									"key": "endTime",
+									"value": "2022-08-08T20:30:00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{userUrl}}/{{version}}/user",
+							"host": [
+								"{{userUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle",
+			"item": [
+				{
+					"name": "getVehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicleUrl}}/{{version}}/vehicle",
+							"host": [
+								"{{vehicleUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVehicleForUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{vehicleUrl}}/{{version}}/vehicle/user/9349cf54-1946-4915-be7e-7decb9090e8e",
+							"host": [
+								"{{vehicleUrl}}"
+							],
+							"path": [
+								"{{version}}",
+								"vehicle",
+								"user",
+								"9349cf54-1946-4915-be7e-7decb9090e8e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

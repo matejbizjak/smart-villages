@@ -15,6 +15,7 @@
 
         <kumuluzee-logs.version>1.4.6</kumuluzee-logs.version>
         <jackson.version>2.13.3</jackson.version>
+        <jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -60,5 +61,37 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <to>
+                        <image>docker.io/matejbizjak/smart-villages-solar-iot</image>
+                    </to>
+                    <from>
+                        <image>eclipse-temurin:11-jre</image>
+                    </from>
+                    <container>
+                        <environment>
+<!--                            <NATS_LEAF_ADDRESSES0_MQTT>ssl://nats-nats-leaf-n1-1:1883</NATS_LEAF_ADDRESSES0_MQTT>-->
+                            <NATS_LEAF_ADDRESSES0_MQTT>tcp://nats-nats-leaf-n1-1:1883</NATS_LEAF_ADDRESSES0_MQTT>
+                        </environment>
+                    </container>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
