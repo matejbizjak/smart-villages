@@ -1,7 +1,6 @@
 package com.matejbizjak.smartvillages.charger.lib.v1;
 
 import com.matejbizjak.smartvillages.charger.persistence.ChargerEnergyEntity;
-import com.matejbizjak.smartvillages.charger.persistence.ChargerEntity;
 import com.matejbizjak.smartvillages.vehicle.lib.v1.Vehicle;
 
 import java.math.BigDecimal;

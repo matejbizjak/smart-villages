@@ -6,8 +6,8 @@ import com.kumuluz.ee.nats.core.annotations.NatsListener;
 import com.kumuluz.ee.nats.core.annotations.Subject;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamListener;
 import com.kumuluz.ee.nats.jetstream.wrappers.JetStreamMessage;
-import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import com.matejbizjak.smartvillages.solar.lib.v1.EnergySolarIntervalForSolar;
+import com.matejbizjak.smartvillages.solar.lib.v1.SolarEnergy;
 import com.matejbizjak.smartvillages.solar.services.EnergyService;
 import com.matejbizjak.smartvillages.solar.services.PositionService;
 

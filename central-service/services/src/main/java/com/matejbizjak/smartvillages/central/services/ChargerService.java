@@ -4,9 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.nats.common.util.SerDes;
-import com.kumuluz.ee.nats.core.annotations.NatsClient;
 import com.kumuluz.ee.nats.jetstream.annotations.JetStreamProducer;
-import com.matejbizjak.smartvillages.central.services.natsclients.SolarClient;
 import io.nats.client.JetStream;
 import io.nats.client.impl.NatsMessage;
 

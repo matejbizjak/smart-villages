@@ -3,7 +3,6 @@ package com.matejbizjak.smartvillages.central.api.v1.resources;
 import com.matejbizjak.smartvillages.central.services.ChargerService;
 import com.matejbizjak.smartvillages.central.services.HouseService;
 import com.matejbizjak.smartvillages.central.services.SolarService;
-import com.matejbizjak.smartvillages.central.services.UserService;
 import com.matejbizjak.smartvillages.central.services.runnables.DailyEnergyReportRunnable;
 
 import javax.enterprise.context.RequestScoped;

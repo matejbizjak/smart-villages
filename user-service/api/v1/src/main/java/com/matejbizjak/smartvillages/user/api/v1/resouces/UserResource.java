@@ -1,11 +1,9 @@
 package com.matejbizjak.smartvillages.user.api.v1.resouces;
 
-import com.matejbizjak.smartvillages.user.api.v1.config.AuthRole;
 import com.matejbizjak.smartvillages.user.services.UserService;
 import com.matejbizjak.smartvillages.userlib.v1.User;
 import org.eclipse.microprofile.faulttolerance.Retry;
 
-import javax.annotation.security.RolesAllowed;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -43,10 +41,10 @@ public class UserResource {
 //        try {
 //            List<User> users = userService.getUsers(getKeycloakSecurityContext().getTokenString());
 
-            List<User> users = new ArrayList<>();
-            users.add(new User("9349cf54-1946-4915-be7e-7decb9090e8e", "user1", "user1@mail.com", "Uporabnik", "Ena", "051000001"));
-            users.add(new User("8349cf54-1946-4915-be7e-7decb9090e8e", "user2", "user2@mail.com", "Uporabnik", "Dva", "051000002"));
-            return Response.status(Response.Status.OK).entity(users).build();
+        List<User> users = new ArrayList<>();
+        users.add(new User("9349cf54-1946-4915-be7e-7decb9090e8e", "user1", "user1@mail.com", "Uporabnik", "Ena", "051000001"));
+        users.add(new User("8349cf54-1946-4915-be7e-7decb9090e8e", "user2", "user2@mail.com", "Uporabnik", "Dva", "051000002"));
+        return Response.status(Response.Status.OK).entity(users).build();
 //        }
 //        catch (MalformedURLException e) {
 //            return Response.serverError().build();

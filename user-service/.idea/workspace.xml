@@ -128,12 +128,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.run">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="User Service" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/api/v1/target/api-v1-1.0.0-SNAPSHOT.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Matej\IdeaProjects\smart-villages\user-service" />

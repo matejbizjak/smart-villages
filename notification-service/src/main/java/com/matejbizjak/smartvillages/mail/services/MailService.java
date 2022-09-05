@@ -79,8 +79,8 @@ public class MailService {
                         , email
                         , "Daily energy report"
                         , energyKwh.compareTo(new BigDecimal(0)) > 0 ?
-                        "Great! Yesterday you produced more energy that you have spend. " :
-                        "Yesterday you have spend more energy that you have produced. "
+                                "Great! Yesterday you produced more energy that you have spend. " :
+                                "Yesterday you have spend more energy that you have produced. "
                         , String.format("The amount is %s Wh.", energyKwh.toString())
                 )
         );

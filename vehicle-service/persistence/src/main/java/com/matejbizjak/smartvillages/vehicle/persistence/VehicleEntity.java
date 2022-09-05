@@ -3,7 +3,6 @@ package com.matejbizjak.smartvillages.vehicle.persistence;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.Instant;
 
 @Entity
 @Table(name = "vehicle")

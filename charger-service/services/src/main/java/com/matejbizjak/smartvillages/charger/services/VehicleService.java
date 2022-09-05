@@ -10,7 +10,6 @@ import org.eclipse.microprofile.rest.client.RestClientBuilder;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.net.URL;
-import java.util.List;
 
 @ApplicationScoped
 public class VehicleService {

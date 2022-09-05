@@ -2,7 +2,6 @@ package com.matejbizjak.smartvillages.central.services;
 
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
-import com.kumuluz.ee.logs.enums.LogLevel;
 import com.matejbizjak.smartvillages.central.services.config.UrlProperties;
 import com.matejbizjak.smartvillages.central.services.restclients.UserApi;
 import com.matejbizjak.smartvillages.userlib.v1.User;
@@ -10,7 +9,6 @@ import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 

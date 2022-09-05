@@ -1,7 +1,5 @@
 package com.matejbizjak.smartvillages.vehicle.lib.v1;
 
-import java.time.Instant;
-
 public class Vehicle {
 
     private String id;
